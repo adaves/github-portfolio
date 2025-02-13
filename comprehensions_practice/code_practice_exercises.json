@@ -1,0 +1,702 @@
+{
+  "practice_types": {
+    "comprehensions": {
+      "exercises": [
+        {
+          "id": "comp_1",
+          "prompt": "Create a list comprehension that flattens a 2D matrix into a single list.\n\nGiven matrix: [[1,2,3], [4,5,6], [7,8,9]]\n\nExpected output: [1,2,3,4,5,6,7,8,9]\n\nHint: You'll need two for loops in your comprehension - one for rows and one for elements.",
+          "sample_solution": "[num for row in matrix for num in row]",
+          "test_cases": [
+            {
+              "input": {
+                "matrix": [
+                  [
+                    1,
+                    2,
+                    3
+                  ],
+                  [
+                    4,
+                    5,
+                    6
+                  ],
+                  [
+                    7,
+                    8,
+                    9
+                  ]
+                ]
+              },
+              "expected_output": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9
+              ]
+            },
+            {
+              "input": {
+                "matrix": [
+                  [
+                    1,
+                    1
+                  ],
+                  [
+                    2,
+                    2
+                  ]
+                ]
+              },
+              "expected_output": [
+                1,
+                1,
+                2,
+                2
+              ]
+            }
+          ],
+          "context": "Nested list comprehension for flattening 2D lists",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension",
+            "nested",
+            "2D"
+          ]
+        },
+        {
+          "id": "comp_2",
+          "prompt": null,
+          "sample_solution": null,
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": null
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_3",
+          "prompt": null,
+          "sample_solution": null,
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": null
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_4",
+          "prompt": "Create a list comprehension that achieves the following: Assign 'Even' or 'Odd' to every number in a given list or a range.",
+          "sample_solution": "['Even' if x % 2 == 0 else 'Odd' for x in range(10)]",
+          "test_cases": [
+            {
+              "input": "[1,2,3,4,5,6,7,8,9,10]",
+              "expected_output": [
+                "Even",
+                "Odd",
+                "Even",
+                "Odd",
+                "Even",
+                "Odd",
+                "Even",
+                "Odd",
+                "Even",
+                "Odd"
+              ]
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_5",
+          "prompt": "Create a list comprehension that achieves the following: Builds a 3D list",
+          "sample_solution": "[[[num for num in range(5)] for _ in range(5)] for _ in range(5)]",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": null
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_6",
+          "prompt": "Create a generator comprehension that sums all squares of integers from 0 to 1_000_000",
+          "sample_solution": "sum(x**2 for x in range(1_000_000)",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": "333332833333500000"
+            }
+          ],
+          "context": "Generator comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "generator",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_7",
+          "prompt": "Create a list comprehension that achieves the following: Calls a function on a range of integers.",
+          "sample_solution": "[square(x) for x in range(10)]\nsquared_nums",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": [
+                0,
+                1,
+                4,
+                9,
+                16,
+                25,
+                36,
+                49,
+                64,
+                81
+              ]
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_8",
+          "prompt": "Create a list comprehension that achieves the following: takes given pairs and turns them into a dictionary using a dictionary comprehension",
+          "sample_solution": "{key:value for key,value in pairs}",
+          "test_cases": [
+            {
+              "input": "pairs = [('a', 1), ('b', 2), ('c', 3)]",
+              "expected_output": null
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_9",
+          "prompt": "Create a list comprehension that achieves the following: given a list of numbers finds all unique numbers by turning the list into a set",
+          "sample_solution": "{x for x in nums}",
+          "test_cases": [
+            {
+              "input": "[1,2,2,3,3,3,4,4,4,4]",
+              "expected_output": [
+                16,
+                1,
+                4,
+                9
+              ]
+            }
+          ],
+          "context": "Set comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "set",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_1",
+          "prompt": "Create a dictionary comprehension that achieves the following: Use the range function and pair the index with range(0,n)",
+          "sample_solution": "{i: i+33 for i in range(5)}",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": {
+                "0": 33,
+                "1": 34,
+                "2": 35,
+                "3": 36,
+                "4": 37
+              }
+            }
+          ],
+          "context": "Dictionary comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "dictionary",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_2",
+          "prompt": "Create a list comprehension that achieves the following: Use the range function to raise a number to itself",
+          "sample_solution": "[x*x for x in range(10)]",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": "[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]"
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_1",
+          "prompt": "Create a list comprehension that achieves the following: find the remainder of all integers using the range function from 1 to 100",
+          "sample_solution": "[x**2 % 5 for x in range(1, 101)]",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": "[1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0, 1, 4, 4, 1, 0]"
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_2",
+          "prompt": "Create a list comprehension that achieves the following: square all integers from 1 to 100",
+          "sample_solution": "[i**2 for i in range(1,101)]",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400, 441, 484, 529, 576, 625, 676, 729, 784, 841, 900, 961, 1024, 1089, 1156, 1225, 1296, 1369, 1444, 1521, 1600, 1681, 1764, 1849, 1936, 2025, 2116, 2209, 2304, 2401, 2500, 2601, 2704, 2809, 2916, 3025, 3136, 3249, 3364, 3481, 3600, 3721, 3844, 3969, 4096, 4225, 4356, 4489, 4624, 4761, 4900, 5041, 5184, 5329, 5476, 5625, 5776, 5929, 6084, 6241, 6400, 6561, 6724, 6889, 7056, 7225, 7396, 7569, 7744, 7921, 8100, 8281, 8464, 8649, 8836, 9025, 9216, 9409, 9604, 9801, 10000]"
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_3",
+          "prompt": null,
+          "sample_solution": null,
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": null
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_4",
+          "prompt": "Create a list comprehension that achieves the following: ___",
+          "sample_solution": null,
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": null
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_5",
+          "prompt": "Create a list comprehension that achieves the following: Find words that start with the letter 'B' in a given list.",
+          "sample_solution": "[name for name in name_list if name.startswith('B')]",
+          "test_cases": [
+            {
+              "input": "['Bill', 'John', 'Sam', 'Bernard', 'Ben', 'Adam']",
+              "expected_output": "['Bill', 'Bernard', 'Ben']"
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_6",
+          "prompt": "Create a list comprehension that achieves the following: Find even values in a list of numbers",
+          "sample_solution": "[1,2,3,4,5,6,7,8,9,10]\nevens_list",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": null
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_7",
+          "prompt": "Create a list comprehension that achieves the following: str1",
+          "sample_solution": "'cat end you in'\nvowels_list",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": null
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_8",
+          "prompt": "Create a list comprehension that achieves the following: Find the length of each word in a given list of words",
+          "sample_solution": "['cat', 'cow', 'dog', 'worm']\nnew_list",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": null
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_9",
+          "prompt": "Create a list comprehension that achieves the following: pairs",
+          "sample_solution": "[('a', 1, 'z'), ('b', 2, 'x'), ('c', 3, 'y')]\nfor letter, number, let in pairs:\n    print(f\"Letter",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": null
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_10",
+          "prompt": "Create a nested list comprehension that generates a 5x5 matrix. Each row should contain numbers from 0 to n.\n\nExample output:\n[[0, 1, 2, 3, 4],\n [0, 1, 2, 3, 4],\n [0, 1, 2, 3, 4],\n [0, 1, 2, 3, 4],\n [0, 1, 2, 3, 4]]\n\nHint: You'll need two nested list comprehensions - outer one for rows, inner one for columns.",
+          "sample_solution": "[[col for col in range(0, 5)] for row in range(0, 5)]",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": [
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ],
+                [
+                  0,
+                  1,
+                  2,
+                  3,
+                  4
+                ]
+              ]
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension",
+            "nested"
+          ]
+        },
+        {
+          "id": "comp_11",
+          "prompt": "Create a list comprehension that achieves the following: Build a list of squared numbers using the range function",
+          "sample_solution": "[x**2 for x in range(10)]",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": null
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_12",
+          "prompt": "Create a list comprehension that achieves the following: evens",
+          "sample_solution": "[x for x in range(10) if x % 2",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": null
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_13",
+          "prompt": "Create a list comprehension that achieves the following: Build a list comprehension that makes every word in a given list upper case",
+          "sample_solution": "[word.upper() for word in words]",
+          "test_cases": [
+            {
+              "input": "[\"hello\", \"world\", \"python\"]\nupper_words",
+              "expected_output": null
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_14",
+          "prompt": "Create a list comprehension that achieves the following: Build a list comprehension that will flatten a given 2-D list of numbers.",
+          "sample_solution": "[num for row in matrix for num in row]",
+          "test_cases": [
+            {
+              "input": "[[1, 2, 3], [4, 5, 6], [7, 8, 9]]\nflatten_matrix",
+              "expected_output": null
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_15",
+          "prompt": "Create a list comprehension that achieves the following: even_odd",
+          "sample_solution": "['Even' if x % 2 == 0 else 'Odd' for x in range(10)]",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": null
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_16",
+          "prompt": "Create a list comprehension that achieves the following: Build a list comprehension that creates a list of tuples where each tuple contains the index and the corresponding word from the given list of words.",
+          "sample_solution": "[(index, word) for index, word in enumerate(words)]",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": null
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_17",
+          "prompt": "Create a list comprehension that achieves the following: finds the intersection of two given list of numbers",
+          "sample_solution": "[x for x in a if x in b]",
+          "test_cases": [
+            {
+              "input": "a = [1, 2, 3, 4]\n b = [3,4,5,6]",
+              "expected_output": null
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_18",
+          "prompt": "Create a list comprehension that achieves the following: Finds integers from 0 to 100 that are divisible by 6",
+          "sample_solution": "[x for x in range(100) if x % 2 == 0 if x % 3 == 0]",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": [
+                0,
+                6,
+                12,
+                18,
+                24,
+                30,
+                36,
+                42,
+                48,
+                54,
+                60,
+                66,
+                72,
+                78,
+                84,
+                90,
+                96
+              ]
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_19",
+          "prompt": "Create a list comprehension that achieves the following: Find all vowels in a given sentence",
+          "sample_solution": "[char for char in sentence if char in 'aeiou']",
+          "test_cases": [
+            {
+              "input": "Look at those flying geese!",
+              "expected_output": [
+                "o",
+                "o",
+                "a",
+                "o",
+                "e",
+                "i",
+                "e",
+                "e",
+                "e"
+              ]
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        },
+        {
+          "id": "comp_20",
+          "prompt": "Create a list comprehension that achieves the following: Create a nested list comprehensions to create a 3x3 identity matrix",
+          "sample_solution": "[[1 if i==j else 0 for j in range(3)] for i in range(3)]",
+          "test_cases": [
+            {
+              "input": null,
+              "expected_output": [
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ]
+              ]
+            }
+          ],
+          "context": "List comprehension example",
+          "difficulty": "medium",
+          "tags": [
+            "list",
+            "comprehension"
+          ]
+        }
+      ]
+    },
+    "for_loops": {
+      "exercises": []
+    }
+  }
+}
